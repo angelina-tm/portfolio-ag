@@ -1,0 +1,142 @@
+@media screen  and (max-width: 768px) {
+    .burger span,
+    .burger span::before,
+    .burger span::after {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #781E1E;
+      border-radius: 2px;
+      transition: 0.3s ease;
+      content: "";
+    }
+
+    .burger span {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .burger span::before {
+      top: -8px;
+    }
+
+    .burger span::after {
+      top: 8px;
+    }
+    .burger {
+      width: 30px;
+      height: 22px;
+      display: block;
+      position: absolute;
+      left: 350px;
+      z-index: 100;
+    }
+
+    .nav {
+      margin: 0;
+    } 
+
+    .nav-list {
+      position: absolute;
+      top: 60px;
+      width: 100%;
+      background: #000;
+      flex-direction: column;
+      align-items: center;
+      padding: 70px 0;
+      transform: translateY(-120%);
+      transition: transform 0.4s ease;
+    }
+
+    #burger-toggle:checked ~ .nav-list {
+      transform: translateY(0);
+      z-index: 12;
+    }
+
+    #burger-toggle:checked + .burger span {
+      background: transparent;
+    }
+
+    #burger-toggle:checked + .burger span::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+
+    #burger-toggle:checked + .burger span::after {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+    .header__text {
+      font-size: 15px;
+    }
+
+    .about__text{
+      padding-right: 20px;
+    }
+    .about__img {
+      margin-right: 0;
+      margin-top: 25px;
+    }
+
+    .basis {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .basis > div {
+      width: 100%;
+    }
+    .image{
+      margin-right: 70px;
+    }
+
+    .first__text,
+    .second__text,
+    .third__text,
+    .another__text,
+    .fourth__text {
+      margin-left: 0;
+      text-align: left;
+    }
+
+    .first__line,
+    .second__line,
+    .third__line,
+    .another__line,
+    .fourth__line, 
+    .fifth__line {
+      width: 100%;
+    }
+    
+
+    .featured-images {
+      flex-direction: column;
+      padding-top: 80px;
+    }
+
+    .featured-images img {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .contact-wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .contact-form {
+      margin-left: 0;
+      width: 100%;
+      max-width: 340px;
+    }
+    .basis > div{
+      width: 100%;
+    }
+
+  }
